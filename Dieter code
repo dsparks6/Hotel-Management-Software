@@ -1,0 +1,963 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+class hotel{
+    int room_number;
+    string roomOneStatus;
+    string roomTwoStatus;
+    string roomThreeStatus;
+    string roomFourStatus;
+    string roomFiveStatus;
+    string roomSixStatus;
+    string roomSevenStatus;
+    string roomEightStatus;
+    string roomNineStatus;
+    string roomTenStatus;
+    string roomElevenStatus;
+    string roomTwelveStatus;
+    string roomThirteenStatus;
+    string roomFourteenStatus;
+    string roomFifteenStatus;
+    string roomSixteenStatus;
+    string roomSeventeenStatus;
+    string roomEighteenStatus;
+    string roomNineteenStatus;
+    string roomTwentyStatus;
+    string status1 = "Available";
+    string status2 = "Occupied";
+    string status3 = "Dirty";
+    string status4 = "Maintenance";
+    string status5 = "Reserved";
+    string date1 = "Today";
+    string date2 = "Tomorrow";
+    string date3 = "Day 3";
+    string date4 = "Day 4";
+    string date5 = "Day 5";
+    string date6 = "Day 6";
+    string date7 = "Day 7";
+public:
+    void roomStatus();
+    void roomList();
+};
+void hotel::roomStatus(){
+    //Giving the initial status of each room as Available.
+    roomOneStatus = status1;
+    roomTwoStatus = status1;
+    roomThreeStatus = status1;
+    roomFourStatus = status1;
+    roomFiveStatus = status1;
+    roomSixStatus = status1;
+    roomSevenStatus = status1;
+    roomEightStatus = status1;
+    roomNineStatus = status1;
+    roomTenStatus = status1;
+    roomElevenStatus = status1;
+    roomTwelveStatus = status1;
+    roomThirteenStatus = status1;
+    roomFourteenStatus = status1;
+    roomFifteenStatus = status1;
+    roomSixteenStatus = status1;
+    roomSeventeenStatus = status1;
+    roomEighteenStatus = status1;
+    roomNineteenStatus = status1;
+    roomTwentyStatus = status1;
+    int choice;
+    //Giving an opening screen showing that every room is available to be reserved.
+    cout << "Types of rooms and abbreviations: \n";
+    cout << " King: K\n Double Queen: DQ\n Double Queen with Kitchen: DQK\n Suite: S\n\n";
+    cout << "\n\t\tList of rooms and statuses";
+    cout << "\n\t\t--------------------------\n";
+   while(room_number <= 20){
+        for(int i = 1;i <= 5;i++){
+            cout << "Room Number: " << i << "\t\tType: K "<< setw(5) <<"\t Status: " << status1 << endl;
+        }
+        for(int i = 6;i <= 10;i++){
+            cout << "Room Number: " << i << "\t\tType: DQ\t Status: " << status1 << endl;
+        }
+        for(int i = 11;i <= 15;i++){
+            cout << "Room Number: " << i << "\t\tType: DQK\t Status: " << status1 << endl;
+        }
+        for(int i = 16;i <= 20;i++){
+            cout << "Room Number: " << i << "\t\tType: S " << setw(5) <<"\t Status: " << status1 << endl;
+        }
+        break;
+        }
+    cout << "Would you like to select a room?" << endl;
+    cout << "Please enter which room number you would like to use: " << room_number << endl;
+    cin >> room_number;
+    
+    switch(room_number){
+        case 1:
+            if(roomOneStatus == status1){
+                //roomOneStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomOneStatus == status2){
+                //roomOneStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomOneStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomOneStatus = status1;
+                cout << endl;
+            }
+            else if(roomOneStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomOneStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 2:
+            if(roomTwoStatus == status1){
+                //roomTwoStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomTwoStatus == status2){
+                //roomTwoStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomTwoStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomTwoStatus = status1;
+                cout << endl;
+            }
+            else if(roomTwoStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomTwoStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 3:
+            if(roomThreeStatus == status1){
+                //roomThreeStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomThreeStatus == status2){
+                //roomThreeStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomThreeStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomThreeStatus = status1;
+                cout << endl;
+            }
+            else if(roomThreeStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomThreeStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 4:
+            if(roomFourStatus == status1){
+                //roomFourStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomFourStatus == status2){
+                //roomFourStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomFourStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomFourStatus = status1;
+                cout << endl;
+            }
+            else if(roomFourStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomFourStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 5:
+            if(roomFiveStatus == status1){
+                //roomFiveStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomFiveStatus == status2){
+                //roomFiveStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomFiveStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomFiveStatus = status1;
+                cout << endl;
+            }
+            else if(roomFiveStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomFiveStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 6:
+            if(roomSixStatus == status1){
+                //roomSixStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomSixStatus == status2){
+                //roomSixStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomSixStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomSixStatus = status1;
+                cout << endl;
+            }
+            else if(roomSixStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomSixStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 7:
+            if(roomSevenStatus == status1){
+                //roomSevenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomSevenStatus == status2){
+                //roomSevenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomSevenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomSevenStatus = status1;
+                cout << endl;
+            }
+            else if(roomSevenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomSevenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 8:
+            if(roomEightStatus == status1){
+                //roomEightStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomEightStatus == status2){
+                //roomEightStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomEightStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomEightStatus = status1;
+                cout << endl;
+            }
+            else if(roomEightStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomEightStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 9:
+            if(roomNineStatus == status1){
+                //roomNineStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomNineStatus == status2){
+                //roomNineStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomNineStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomNineStatus = status1;
+                cout << endl;
+            }
+            else if(roomNineStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomNineStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 10:
+            if(roomTenStatus == status1){
+                //roomTenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomTenStatus == status2){
+                //roomTenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomTenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomTenStatus = status1;
+                cout << endl;
+            }
+            else if(roomTenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomTenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 11:
+            if(roomElevenStatus == status1){
+                //roomElevenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomElevenStatus == status2){
+                //roomElevenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomElevenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomElevenStatus = status1;
+                cout << endl;
+            }
+            else if(roomElevenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomElevenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 12:
+            if(roomTwelveStatus == status1){
+                //roomTwelveStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomTwelveStatus == status2){
+                //roomTwelveStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomTwelveStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomTwelveStatus = status1;
+                cout << endl;
+            }
+            else if(roomTwelveStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomTwelveStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 13:
+            if(roomThirteenStatus == status1){
+                //roomThirteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomThirteenStatus == status2){
+                //roomThirteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomThirteenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomThirteenStatus = status1;
+                cout << endl;
+            }
+            else if(roomThirteenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomThirteenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 14:
+            if(roomFourteenStatus == status1){
+                //roomFourteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomFourteenStatus == status2){
+                //roomFourteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomFourteenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomFourteenStatus = status1;
+                cout << endl;
+            }
+            else if(roomFourteenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomFourteenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 15:
+            if(roomFifteenStatus == status1){
+                //roomFifteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomFifteenStatus == status2){
+                //roomFifteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomFifteenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomFifteenStatus = status1;
+                cout << endl;
+            }
+            else if(roomFifteenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomFifteenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 16:
+            if(roomSixteenStatus == status1){
+                //roomSixteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomSixteenStatus == status2){
+                //roomSixteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomSixteenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomSixteenStatus = status1;
+                cout << endl;
+            }
+            else if(roomSixteenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomSixteenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 17:
+            if(roomSeventeenStatus == status1){
+                //roomSeventeenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomSeventeenStatus == status2){
+                //roomSeventeenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomSeventeenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomSeventeenStatus = status1;
+                cout << endl;
+            }
+            else if(roomSeventeenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomSeventeenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 18:
+            if(roomEighteenStatus == status1){
+                //roomEighteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomEighteenStatus == status2){
+                //roomEighteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomEighteenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomEighteenStatus = status1;
+                cout << endl;
+            }
+            else if(roomEighteenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomEighteenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 19:
+            if(roomNineteenStatus == status1){
+                //roomNineteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomNineteenStatus == status2){
+                //roomNineteenStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomNineteenStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomNineteenStatus = status1;
+                cout << endl;
+            }
+            else if(roomNineteenStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will staty as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomNineteenStatus = status1;
+                cout << endl;
+            }
+            break;
+        case 20:
+            if(roomTwentyStatus == status1){
+                //roomTwentyStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomTwentyStatus == status2){
+                //roomTwentyStatus = currentStayScreen(string);
+                cout << endl;
+            }
+            else if(roomTwentyStatus == status3){
+                cout << "WARNING: " << status3 << "!! Are you sure you want this room to be available?" << endl;
+                cout << "If yes, press 1, if no, press 2 and status will stay as dirty." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomTwentyStatus = status1;
+                cout << endl;
+            }
+            else if(roomTwentyStatus == status4){
+                cout << "Warning: " << status4 << "!! Are you sure you want this room to be available?" << endl;
+                cout <<"If yes, press 1, if no, press 2 and status will stay as Maintenance." << endl;
+                cin >> choice;
+                if(choice == 1)
+                    roomTwentyStatus = status1;
+                cout << endl;
+            }
+            break;
+        default:
+            cout <<"That is not a valid entry!!" << endl;
+    }
+    cout << "Room Number: 1 " << "\t\tType: K "<< setw(5) <<"\t Status: " << roomOneStatus << endl;
+    cout << "Room Number: 2 " << "\t\tType: K "<< setw(5) <<"\t Status: " << roomTwoStatus << endl;
+    cout << "Room Number: 3 " << "\t\tType: K "<< setw(5) <<"\t Status: " << roomThreeStatus << endl;
+    cout << "Room Number: 4 " << "\t\tType: K "<< setw(5) <<"\t Status: " << roomFourStatus << endl;
+    cout << "Room Number: 5 " << "\t\tType: K "<< setw(5) <<"\t Status: " << roomFiveStatus << endl;
+    cout << "Room Number: 6 " << "\t\tType: DQ "<< setw(5) <<"\t Status: " << roomSixStatus << endl;
+    cout << "Room Number: 7 " << "\t\tType: DQ "<< setw(5) <<"\t Status: " << roomSevenStatus << endl;
+    cout << "Room Number: 8 " << "\t\tType: DQ "<< setw(5) <<"\t Status: " << roomEightStatus << endl;
+    cout << "Room Number: 9 " << "\t\tType: DQ "<< setw(5) <<"\t Status: " << roomNineStatus << endl;
+    cout << "Room Number: 10 " << "\tType: DQ "<< setw(5) <<"\t Status: " << roomTenStatus << endl;
+    cout << "Room Number: 11 " << "\tType: DQK "<< setw(5) <<"\t Status: " << roomElevenStatus << endl;
+    cout << "Room Number: 12 " << "\tType: DQK "<< setw(5) <<"\t Status: " << roomTwelveStatus << endl;
+    cout << "Room Number: 13 " << "\tType: DQK "<< setw(5) <<"\t Status: " << roomThirteenStatus << endl;
+    cout << "Room Number: 14 " << "\tType: DQK "<< setw(5) <<"\t Status: " << roomFourteenStatus << endl;
+    cout << "Room Number: 15 " << "\tType: DQK "<< setw(5) <<"\t Status: " << roomFifteenStatus << endl;
+    cout << "Room Number: 16 " << "\tType: S "<< setw(5) <<"\t Status: " << roomSixteenStatus << endl;
+    cout << "Room Number: 17 " << "\tType: S "<< setw(5) <<"\t Status: " << roomSeventeenStatus << endl;
+    cout << "Room Number: 18 " << "\tType: S "<< setw(5) <<"\t Status: " << roomEighteenStatus << endl;
+    cout << "Room Number: 19 " << "\tType: S "<< setw(5) <<"\t Status: " << roomNineteenStatus << endl;
+    cout << "Room Number: 20 " << "\tType: S "<< setw(5) <<"\t Status: " << roomTwentyStatus << endl;
+    
+}
+void hotel::roomList(){
+    roomOneStatus = status1;
+    roomTwoStatus = status1;
+    roomThreeStatus = status1;
+    roomFourStatus = status1;
+    roomFiveStatus = status1;
+    roomSixStatus = status1;
+    roomSevenStatus = status1;
+    roomEightStatus = status1;
+    roomNineStatus = status1;
+    roomTenStatus = status1;
+    roomElevenStatus = status1;
+    roomTwelveStatus = status1;
+    roomThirteenStatus = status1;
+    roomFourteenStatus = status1;
+    roomFifteenStatus = status1;
+    roomSixteenStatus = status1;
+    roomSeventeenStatus = status1;
+    roomEighteenStatus = status1;
+    roomNineteenStatus = status1;
+    roomTwentyStatus = status1;
+    string date;
+    //Setting up structure for how the stays for the next 7 days will be
+    cout << "\t\t\tToday\t Tomorrow\t Day 3\t   Day 4\t Day 5\t   Day 6\t Day 7\n";
+    cout << "\t\t |---------|----------|---------|---------|---------|---------|---------|\n";
+    //Guest will represent the guest variable for part two when we do the backend coding
+        for(int i = 1;i <= 20;i++){
+            cout << "Room: " << setw(2) << i << setw(4) << /*Guest <<*/ setw(9) << /*Guest <<*/ setw(11) << /*Guest <<*/ setw(7) << /*Guest <<*/ setw(10) << /*Guest <<*/ setw(10) << /*Guest <<*/ setw(6) << /*Guest <<*/ endl;
+            cout << "\t\t ------------------------------------------------------------------------" << endl;
+        }
+    cout << "Would you like to select a room?" << endl;
+    cout << "Please enter which room number you would like to check: " << room_number << endl;
+    cin >> room_number;
+    
+    switch(room_number){
+        case 1:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 2:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 3:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 4:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 5:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 6:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 7:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 8:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 9:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 10:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 11:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 12:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 13:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 14:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 15:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 16:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 17:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 18:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 19:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        case 20:
+            if(roomOneStatus == status2){
+               //currentStayScreen();
+            }
+            else if(roomOneStatus == status5 && roomOneStatus != status2){
+                //currentStayScreen();
+            }
+            else if(roomOneStatus == status1 && roomOneStatus != status5 && date == date1){
+                //currentStayScreen();
+            }
+            else if((roomOneStatus == status1 && roomOneStatus != status5) && (date == date2 || date == date3 || date == date4 || date == date5 || date == date6 || date == date7)){
+                //Reservations();
+            }
+            break;
+        default:
+            cout <<"That is not a valid entry!!" << endl;
+    }
+}
+int main() {
+    
+    hotel h;
+    
+    h.roomStatus();
+    cout <<endl << endl << endl << endl;
+    h.roomList();
+    h.roomList();
+}
