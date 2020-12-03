@@ -216,8 +216,42 @@ public:
 
 
 class Hotel {
-public:
-
+    int room_number;
+    string roomOneStatus;
+    string roomTwoStatus;
+    string roomThreeStatus;
+    string roomFourStatus;
+    string roomFiveStatus;
+    string roomSixStatus;
+    string roomSevenStatus;
+    string roomEightStatus;
+    string roomNineStatus;
+    string roomTenStatus;
+    string roomElevenStatus;
+    string roomTwelveStatus;
+    string roomThirteenStatus;
+    string roomFourteenStatus;
+    string roomFifteenStatus;
+    string roomSixteenStatus;
+    string roomSeventeenStatus;
+    string roomEighteenStatus;
+    string roomNineteenStatus;
+    string roomTwentyStatus;
+    string status1 = "Available";
+    string status2 = "Occupied";
+    string status3 = "Dirty";
+    string status4 = "Maintenance";
+    string status5 = "Reserved";
+    string date1 = "Today";
+    string date2 = "Tomorrow";
+    string date3 = "Day 3";
+    string date4 = "Day 4";
+    string date5 = "Day 5";
+    string date6 = "Day 6";
+    string date7 = "Day 7";
+	public:
+	void roomStatus();
+        void roomList();
 	std::vector<Reservation> res;
 
 	Hotel() {
